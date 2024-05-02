@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "start": "npx ts-node strategy-pattern",
+    "start:bad": "npx ts-node bad-practice"
+  },
   "devDependencies": {
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"

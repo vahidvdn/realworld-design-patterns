@@ -6,7 +6,8 @@ class OAuthBad {
       case 'Google':
         console.log('Perform an http call to Google');
         console.log('Do your stuff here');
-      
+        break;
+
       case 'Facebook':
         console.log('Perform an http call to Facebook');
         console.log('Do your stuff here');

@@ -16,9 +16,9 @@ There is a `README` file that you can review first.
 
 Here is some steps in each `README` file:
 
-- User Case: a short description about the specific problem that we want to solve.
-- Bad Practice: a typical solution that works but not in a proper way.
-- Good Practice: implementing the specified design pattern to solve the problem in a proper way.
+- 💡 Use Case: a short description about the specific problem that we want to solve.
+- ❌ Bad Practice: a typical solution that works but not in a proper way.
+- ✅ Good Practice: implementing the specified design pattern to solve the problem in a proper way.
 
 ## How to Run
 
