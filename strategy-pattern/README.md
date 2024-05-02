@@ -1,3 +1,7 @@
+## 💡 Use Case
+
+Let's say you want to authenticate users with oAuth, based on Google, Facebook and LinkedIn
+
 ## ❌ Bad Practice
 
 ```ts
@@ -15,8 +19,8 @@ class OAuthBad {
         console.log('Do your stuff here');
         break;
       
-      case 'Twitter':
-        console.log('Perform an http call to Twitter');
+      case 'LinkedIn':
+        console.log('Perform an http call to LinkedIn');
         console.log('Do your stuff here');
         break;
     
