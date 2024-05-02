@@ -1,7 +1,7 @@
-# Real World Design Patterns
+# Real World Design Patterns 🗺️
 Explore real-world scenarios and best practices for design patterns in this comprehensive repository. Elevate your software design skills with practical examples and insightful discussions.
 
-## How to Learn?
+## How to Learn? 📖
 For each design pattern, there is folder based on `TypeScript`. If you are comming from another programming language world, don't worry. They are not complicated.
 
 You can open directory, for instance:
