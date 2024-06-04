@@ -44,6 +44,16 @@ $ npm run start:bad
 
 Contributing to a community project is always welcome.
 
+## Checklist
+
+- [x] Strategy Pattern
+- [x] Dependency Injection Pattern
+- [ ] Chain of Responsibility Pattern
+- [ ] Template Method Pattern
+- [ ] Command Pattern
+- [ ] Decorator Pattern
+- [ ] Single Responsibility
+
 ## Support
 
 Any support is welcome. You can give the project a star, if you liked it ⭐
