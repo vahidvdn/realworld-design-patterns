@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "npx ts-node dependency-injection",
+    "start:bad": "npx ts-node bad-practice"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
