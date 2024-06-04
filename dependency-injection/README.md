@@ -76,4 +76,6 @@ const userService = app.get(UserService);
 userService.getUsers();
 ```
 
-Note: Check `container.ts` for imported files.
+Note 1: Check `container.ts` for imported files.
+
+Note 2: For large scale projects, I recommend using some frameworks like [NestJS](https://nestjs.com/) or some community packages like [Inversify](https://github.com/inversify/InversifyJS) to have DI. Because this was just a basic implementation just as a proof of concept so you don't want to re-invent the wheel.
