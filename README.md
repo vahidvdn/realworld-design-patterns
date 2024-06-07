@@ -48,7 +48,7 @@ Contributing to a community project is always welcome.
 
 - [x] Strategy Pattern
 - [x] Dependency Injection Pattern
-- [ ] Chain of Responsibility Pattern
+- [x] Chain of Responsibility Pattern
 - [ ] Template Method Pattern
 - [ ] Command Pattern
 - [ ] Decorator Pattern
