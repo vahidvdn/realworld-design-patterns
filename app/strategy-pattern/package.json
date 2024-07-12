@@ -1,4 +1,5 @@
 {
+  "name": "strategy-pattern",
   "scripts": {
     "start": "ts-node strategy-pattern",
     "start:bad": "ts-node bad-practice"
