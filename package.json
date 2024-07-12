@@ -1,0 +1,18 @@
+{
+  "name": "@nx/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@nx/js": "19.3.1",
+    "@nx/workspace": "19.3.1",
+    "nx": "19.3.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "workspaces": [
+    "app/*"
+  ]
+}
