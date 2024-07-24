@@ -2,17 +2,34 @@
   "name": "@nx/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
   "private": true,
-  "dependencies": {},
   "devDependencies": {
     "@nx/js": "19.3.1",
     "@nx/workspace": "19.3.1",
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
     "nx": "19.3.1",
+    "ts-jest": "^29.2.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
   "workspaces": [
     "app/*"
-  ]
+  ],
+  "jest": {
+    "roots": [
+    "<rootDir>/app"
+  ],
+  "testMatch": [
+    "**/__tests__/**/*.+(ts|tsx|js)",
+    "**/?(*.)+(spec|test).+(ts|tsx|js)"
+  ],
+  "transform": {
+    "^.+\\.(ts|tsx)$": "ts-jest"
+  }
+  }
 }

@@ -6,7 +6,7 @@
 import { Provider } from "./interfaces"
 import { FacebookAuth, GoogleAuth, LinkedInAuth } from "./providers"
 
-class OAuth {
+export class OAuth {
   constructor(
     private googleAuth: GoogleAuth,
     private facebookAuth: FacebookAuth,
