@@ -1,6 +1,6 @@
 import { IUser } from "./interface";
 
-class User {
+export class User {
   constructor() {}
 
   levelUp(user: IUser) {
