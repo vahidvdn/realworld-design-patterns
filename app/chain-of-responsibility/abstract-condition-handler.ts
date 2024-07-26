@@ -1,7 +1,7 @@
 import { ConditionHandler } from './interface';
 
 export class AbstractConditionHandler implements ConditionHandler {
-  private nextHandler: ConditionHandler | null = null;
+  public nextHandler: ConditionHandler | null = null;
 
   public setNext(handler: ConditionHandler): ConditionHandler {
     this.nextHandler = handler;
