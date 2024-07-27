@@ -1,20 +1,21 @@
-class Order {
+export class Order {
   constructor() {}
 
   getOrderByUser(userId) {
-    console.log('return order of user:', userId);
+    return `return order of user:${userId}`;
   }
 }
 
-class User {
+export class User {
   private order: Order;
   constructor() {
     this.order = new Order();
   }
 
   getUser(userId) {
-    this.order.getOrderByUser(userId);
+    const order = this.order.getOrderByUser(userId);
     console.log('return user and order of user with id:', userId);
+    return order + ' for user'
   }
 }
 
