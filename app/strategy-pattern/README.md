@@ -1,3 +1,5 @@
+![strategy-design-pattern](../../assets/strategy-pattern.jpg)
+
 ## 💡 Use Case
 
 Let's say you want to authenticate users with oAuth, based on Google, Facebook and LinkedIn
