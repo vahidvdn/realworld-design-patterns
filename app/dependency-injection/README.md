@@ -1,3 +1,5 @@
+![dependency-injection-design-pattern](../../assets/dependency-injection.jpg)
+
 ## 💡 Use Case
 
 Let's say you want to use some other classes in your User class (e.g. order)

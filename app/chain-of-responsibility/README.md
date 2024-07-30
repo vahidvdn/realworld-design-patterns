@@ -1,3 +1,5 @@
+![chain-of-responsibility-cover](../../assets/chain-of-res.jpg)
+
 ## 💡 Use Case
 
 Let's say you want to level up based on some conditions. Here I took some basic logic just for demonstration. But in realworld you may have some complex

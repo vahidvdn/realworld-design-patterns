@@ -1,3 +1,5 @@
+![design-pattern-cover](assets/cover.jpg)
+
 # Real World Design Patterns 🗺️
 Explore real-world scenarios and best practices for design patterns in this comprehensive repository. Elevate your software design skills with practical examples and insightful discussions.
 
@@ -19,6 +21,10 @@ Here is some steps in each `README` file:
 - 💡 Use Case: a short description about the specific problem that we want to solve.
 - ❌ Bad Practice: a typical solution that works but not in a proper way.
 - ✅ Good Practice: implementing the specified design pattern to solve the problem in a proper way.
+
+Diagram: There is also a diagram to represent the oveview of the design pattern to understand better. This is an example:
+
+![design-pattern-cover](assets/strategy-pattern.jpg)
 
 ## How to Run
 
@@ -60,6 +66,7 @@ Contributing to a community project is always welcome. ✨ This workspace has be
 - [x] Strategy Pattern
 - [x] Dependency Injection Pattern
 - [x] Chain of Responsibility Pattern
+- [ ] Builder Pattern
 - [ ] Template Method Pattern
 - [ ] Command Pattern
 - [ ] Decorator Pattern
