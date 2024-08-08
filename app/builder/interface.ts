@@ -8,3 +8,9 @@ export interface PostData {
   title: string;
   body: string;
 }
+
+export interface QueryParam {
+  status: string;
+  role: string;
+}
+
