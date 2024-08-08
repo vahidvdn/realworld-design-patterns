@@ -28,7 +28,7 @@ Diagram: There is also a diagram to represent the oveview of the design pattern 
 
 ## How to Run
 
-After opening the design pattern directory, run:
+In the root directory, run:
 
 ```
 $ npm install
