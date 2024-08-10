@@ -1,6 +1,7 @@
 import axios, { AxiosRequestConfig } from "axios";
 
 import { PostData, QueryParam, ResponseData } from "./interface";
+import { url } from "./const";
 
 export async function makePostRequest(data: PostData) {
   const queryParams: QueryParam = {
@@ -17,11 +18,7 @@ export async function makePostRequest(data: PostData) {
   };
 
   try {
-    const response = await axios.post<ResponseData>(
-      'https://jsonplaceholder.typicode.com/posts',
-      data,
-      config
-    );
+    const response = await axios.post<ResponseData>(url, data, config);
     console.log('Response Data:', response.data);
     return response.data
   } catch (error) {
