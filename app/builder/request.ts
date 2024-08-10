@@ -22,6 +22,6 @@ export async function makePostRequest(data: PostData) {
     console.log('Response Data:', response.data);
     return response.data
   } catch (error) {
-    console.error('Error:', error);
+    return error;
   }
 }

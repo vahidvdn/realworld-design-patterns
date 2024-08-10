@@ -5,7 +5,7 @@ import { ResponseData } from "./interface";
 import { url } from './const';
 
 
-const sendRequest = async () => {
+export const sendRequest = async () => {
   const builder = new RequestBuilder();
   const request = builder
     .setParams({ name: 'John Doe' })
@@ -16,7 +16,7 @@ const sendRequest = async () => {
 
   const response = await axios.post<ResponseData>(url, request.data, request);
   console.log(response.data)
-
+  return response.data
 }
 
 sendRequest();
