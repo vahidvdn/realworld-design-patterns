@@ -1,4 +1,5 @@
-import { DB, Event } from "./bad-practice"
+import { DB } from "./bad-practice"
+import { Event } from "./event"
 
 describe('Decorator bad practice', () => {
   const mockPayload = { name: 'Vahid Najafi' }

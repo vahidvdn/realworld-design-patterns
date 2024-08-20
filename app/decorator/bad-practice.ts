@@ -1,11 +1,4 @@
-export class Event {
-  constructor() {}
-
-  publish(payload: any) {
-    console.log('payload published', payload);
-    return true;
-  }
-}
+import { Event } from "./event";
 
 export class DB {
   constructor() {}
