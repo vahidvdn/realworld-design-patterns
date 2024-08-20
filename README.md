@@ -13,7 +13,7 @@ For each design pattern, there is folder based on `TypeScript`. If you are commi
 You can open directory, for instance:
 
 ```
-$ cd strategy-pattern
+$ cd app/strategy-pattern
 ```
 
 There is a `README` file that you can review first.
@@ -71,9 +71,9 @@ Contributing to a community project is always welcome.
 - [x] Dependency Injection Pattern
 - [x] Chain of Responsibility Pattern
 - [x] Builder Pattern
+- [x] Decorator Pattern
 - [ ] Template Method Pattern
 - [ ] Command Pattern
-- [ ] Decorator Pattern
 - [ ] Single Responsibility
 
 ## Support
