@@ -4,7 +4,9 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:cov": "jest  --coverage",
+    "open:cover": "npm run test:cov && open-cli ./coverage/index.html"
   },
   "private": true,
   "devDependencies": {
@@ -30,7 +32,9 @@
     ],
     "transform": {
       "^.+\\.(ts|tsx)$": "ts-jest"
-    }
+    },
+    "collectCoverage": true,
+    "coverageReporters": ["json", "html"]
   },
   "dependencies": {
     "axios": "^1.7.3"
