@@ -6,7 +6,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest  --coverage",
-    "open:cover": "npm run test:cov && open-cli ./coverage/index.html"
+    "test:cov:open": "npm run test:cov && open-cli ./coverage/index.html"
   },
   "private": true,
   "devDependencies": {
