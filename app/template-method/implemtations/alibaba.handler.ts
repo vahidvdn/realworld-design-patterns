@@ -16,11 +16,11 @@ export class AlibabaHandler extends BaseHandler<ResponseData, PostData> {
 
     const url = `${this.baseUrl}/${this.api}`
     const response = await axios.post<ResponseData>(url, data);
-      return {
-        page: 1,
-        offset: 10,
-        total: 10,
-        data: [response.data],
-      };
+    return {
+      page: 1,
+      offset: 10,
+      total: 10,
+      data: [response.data],
+    };
   }
 }
