@@ -88,7 +88,9 @@ Contributing to a community project is always welcome.
 - [x] Chain of Responsibility Pattern
 - [x] Builder Pattern
 - [x] Decorator Pattern
-- [ ] Template Method Pattern
+- [x] Template Method Pattern
+- [ ] Observer Pattern
+- [ ] Proxy Pattern
 - [ ] Command Pattern
 - [ ] Single Responsibility
 
