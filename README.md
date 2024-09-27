@@ -89,7 +89,7 @@ Contributing to a community project is always welcome.
 - [x] Builder Pattern
 - [x] Decorator Pattern
 - [x] Template Method Pattern
-- [ ] Observer Pattern
+- [x] Observer Pattern
 - [ ] Proxy Pattern
 - [ ] Command Pattern
 - [ ] Single Responsibility
