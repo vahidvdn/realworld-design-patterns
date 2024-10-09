@@ -21,7 +21,7 @@ export class TextEditor {
     this.content = this.content.slice(0, start) + boldedText + this.content.slice(start + length);
   }
 
-  public italic() { /* ... */ }
+  public italic(start: number, length: number) { /* ... */ }
 
   // Undo the last operation (revert to the previous state)
   public undo(): void {
