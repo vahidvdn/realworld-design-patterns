@@ -30,7 +30,11 @@ Here is some steps in each `README` file:
 
 Diagram: There is also a diagram to represent the oveview of the design pattern to understand better. This is an example:
 
-![design-pattern-cover](assets/strategy-pattern.jpg)
+![design-pattern-diagram](assets/strategy-pattern.jpg)
+![design-pattern-diagram](assets/command-pattern.jpg)
+![design-pattern-diagram](assets/chain-of-res.jpg)
+
+See `/app` folder for all design patterns. ✅
 
 ## How to Run
 
@@ -90,9 +94,9 @@ Contributing to a community project is always welcome.
 - [x] Decorator Pattern
 - [x] Template Method Pattern
 - [x] Observer Pattern
+- [x] Command Pattern
 - [ ] Proxy Pattern
-- [ ] Command Pattern
-- [ ] Single Responsibility
+- [ ] Adapter Pattern
 
 ## Support
 
