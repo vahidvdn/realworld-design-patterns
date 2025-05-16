@@ -37,13 +37,19 @@ Here is some steps in each `README` file:
 - ❌ Bad Practice: a typical solution that works but not in a proper way.
 - ✅ Good Practice: implementing the specified design pattern to solve the problem in a proper way.
 
-Diagram: There is also a diagram to represent the oveview of the design pattern to understand better. This is an example:
+Diagram: There is also a diagram to represent the oveview of the design pattern to understand better. These are **some examples**:
 
+#### Strategy Pattern
 ![design-pattern-diagram](assets/strategy-pattern.jpg)
+------
+#### Command Pattern
 ![design-pattern-diagram](assets/command-pattern.jpg)
+------
+#### Chain of Responsibility Pattern
 ![design-pattern-diagram](assets/chain-of-res.jpg)
+------
 
-See `/app` folder for all design patterns. ✅
+Open `/app` folder to see [all design patterns](https://github.com/vahidvdn/realworld-design-patterns/tree/master/app). ✅
 
 ## How to Run
 
@@ -104,6 +110,7 @@ Contributing to a community project is always welcome.
 - [x] Template Method Pattern
 - [x] Observer Pattern
 - [x] Command Pattern
+- [x] Composite Pattern
 - [ ] Proxy Pattern
 - [ ] Adapter Pattern
 
