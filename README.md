@@ -40,12 +40,15 @@ Here is some steps in each `README` file:
 Diagram: There is also a diagram to represent the oveview of the design pattern to understand better. These are **some examples**:
 
 #### Strategy Pattern
+
 ![design-pattern-diagram](assets/strategy-pattern.jpg)
 ------
 #### Command Pattern
+
 ![design-pattern-diagram](assets/command-pattern.jpg)
 ------
 #### Chain of Responsibility Pattern
+
 ![design-pattern-diagram](assets/chain-of-res.jpg)
 ------
 
@@ -111,8 +114,9 @@ Contributing to a community project is always welcome.
 - [x] Observer Pattern
 - [x] Command Pattern
 - [x] Composite Pattern
+- [x] Adapter Pattern
 - [ ] Proxy Pattern
-- [ ] Adapter Pattern
+- [ ] Memento Pattern
 
 ## Support
 
