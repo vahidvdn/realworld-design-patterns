@@ -25,10 +25,8 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
 
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
-      # - run: npx nx-cloud record -- echo Hello World
       - run: npx nx affected -t --no-cloud --base=remotes/origin/master~1 --head=remotes/origin/master lint test build
       - run: npm run test:cov
-
       - name: Upload results to Codecov
         uses: codecov/codecov-action@v4
         with:
