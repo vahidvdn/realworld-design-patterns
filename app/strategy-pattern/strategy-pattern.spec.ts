@@ -1,4 +1,4 @@
-import { OAuth } from "./strategy-pattern"
+import { OAuthContext } from "./strategy-pattern"
 
 describe('Strategy Pattern', () => {
   const mockGoogleAuth = {
@@ -16,21 +16,24 @@ describe('Strategy Pattern', () => {
   });
 
   it('should authenticate google', () => {
-    const oauth = new OAuth(mockGoogleAuth, mockFacebookAuth, mockLinkedInAuth)
-    oauth.authenticate('google')
+    const oauth = new OAuthContext()
+    oauth.setStrategy(mockGoogleAuth)
+    oauth.authenticate()
     expect(mockGoogleAuth.authenticate).toHaveBeenCalledTimes(1);
   })
 
   it('should authenticate facebook', () => {
-    const oauth = new OAuth(mockGoogleAuth, mockFacebookAuth, mockLinkedInAuth)
-    oauth.authenticate('facebook')
+    const oauth = new OAuthContext()
+    oauth.setStrategy(mockFacebookAuth)
+    oauth.authenticate()
     expect(mockFacebookAuth.authenticate).toHaveBeenCalledTimes(1);
     expect(mockGoogleAuth.authenticate).toHaveBeenCalledTimes(0);
   })
 
   it('should authenticate linkedin', () => {
-    const oauth = new OAuth(mockGoogleAuth, mockFacebookAuth, mockLinkedInAuth)
-    oauth.authenticate('linkedIn')
+    const oauth = new OAuthContext()
+    oauth.setStrategy(mockLinkedInAuth)
+    oauth.authenticate()
     expect(mockLinkedInAuth.authenticate).toHaveBeenCalledTimes(1);
     expect(mockFacebookAuth.authenticate).toHaveBeenCalledTimes(0);
     expect(mockGoogleAuth.authenticate).toHaveBeenCalledTimes(0);
