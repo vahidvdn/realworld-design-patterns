@@ -3,24 +3,33 @@
  * e.g. Google, Facebook, LinkedIn
  */
 
-import { Provider } from "./interfaces"
+import { IOAuth, Provider } from "./interfaces"
 import { FacebookAuth, GoogleAuth, LinkedInAuth } from "./providers"
 
-export class OAuth {
-  constructor(
-    private googleAuth: GoogleAuth,
-    private facebookAuth: FacebookAuth,
-    private linkedInAuth: LinkedInAuth,
-  ) {}
+export class OAuthContext {
+  private strategy: IOAuth;
 
-  authenticate(provider: Provider) {
-    this[`${provider}Auth`].authenticate()
+  constructor() {}
+
+  setStrategy(strategy: IOAuth) {
+    this.strategy = strategy;
+  }
+
+  authenticate() {
+    if (!this.strategy) {
+      throw new Error("Authenticate strategy not set");
+    }
+    this.strategy.authenticate();
   }
 }
 
 const google = new GoogleAuth();
 const facebook = new FacebookAuth();
-const linkedIn = new LinkedInAuth();
+// const linkedIn = new LinkedInAuth();
 
-const oauth = new OAuth(google, facebook, linkedIn);
-oauth.authenticate('facebook');
+const oauthContext = new OAuthContext();
+oauthContext.setStrategy(google);
+oauthContext.authenticate();
+
+oauthContext.setStrategy(facebook);
+oauthContext.authenticate();
