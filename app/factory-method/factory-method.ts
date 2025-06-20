@@ -21,3 +21,9 @@ export class AuthenticationFactory {
 const typeUserInput: AuthType = 'Google'; // Change this to 'Facebook' or 'LinkedIn' to test other providers
 const authProvider = AuthenticationFactory.createAuthentication(typeUserInput);
 authProvider.authenticate();
+
+// or
+
+const typeUserInput2: AuthType = 'LinkedIn';
+const authProvider2 = AuthenticationFactory.createAuthentication(typeUserInput2);
+authProvider2.authenticate();
