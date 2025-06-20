@@ -115,6 +115,7 @@ Contributing to a community project is always welcome.
 - [x] Command Pattern
 - [x] Composite Pattern
 - [x] Adapter Pattern
+- [x] Factory Method Pattern
 - [ ] Proxy Pattern
 - [ ] Memento Pattern
 
