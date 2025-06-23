@@ -38,4 +38,9 @@ describe('Strategy Pattern', () => {
     expect(mockFacebookAuth.authenticate).toHaveBeenCalledTimes(0);
     expect(mockGoogleAuth.authenticate).toHaveBeenCalledTimes(0);
   })
+
+  it('should throw an error if strategy is not set', () => {
+    const oauth = new OAuthContext();
+    expect(() => oauth.authenticate()).toThrow("Authenticate strategy not set");
+  });
 })
