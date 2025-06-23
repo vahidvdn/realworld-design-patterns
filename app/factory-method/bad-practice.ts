@@ -1,5 +1,5 @@
 import { FacebookAuth, GoogleAuth, LinkedInAuth } from "../strategy-pattern/providers";
-import { AuthType } from "./factory-method";
+import { AuthType } from "./factory-static";
 
 let userInput: AuthType; // user can send anything
 

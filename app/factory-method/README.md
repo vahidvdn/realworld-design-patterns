@@ -1,6 +1,6 @@
 ![factory-method](../../assets/factory-method.jpg)
 
-## 💡 Use Case
+## 💡 Use Case 1 - Static Factory
 
 Previously we learned about the Strategy Pattern. Now we want to decide which strategy to use at runtime. Instead of repeating this decision in every place, we can use the Factory Method Pattern to avoid this repetition.
 
@@ -46,34 +46,79 @@ export class AuthenticationFactory {
 
 const typeUserInput: AuthType = 'Google'; // Change this to 'Facebook' or 'LinkedIn' to test other providers
 const authProvider = AuthenticationFactory.createAuthentication(typeUserInput);
+authProvider.authenticate();
 ```
 
-### Bonus Point
+## 💡 Use Case 2 - Factory Method
 
-Some people create concrete factory class for each item. For the sake of simplicity, we will use a single factory class. Let's see a quick example:
+Factory method is a bit more than a simple static factory. Now, it's time to introduce concrete factory classes. We can create a factory class for each authentication provider. The following implementation is known as "Factory Method".
+
+First we need a "Superclass":
 
 ```ts
-interface AuthFactory {
-  createAuthentication(): IOAuth;
-}
+abstract class OAuthFactory {
+  abstract createAuthentication(): IOAuth;
 
-class GoogleAuthFactory implements AuthFactory {
+  authenticate() {
+    const auth = this.createAuthentication();
+    auth.authenticate();
+  }
+}
+```
+Now each concrete factory class extends the `OAuthFactory` class and implements the `createAuthentication` method. The `createAuthentication` method returns the relevant authentication object.
+
+```ts
+class GoogleAuthFactory extends OAuthFactory {
   createAuthentication(): IOAuth {
     return new GoogleAuth();
   }
 }
 
-class FacebookAuthFactory implements AuthFactory {
+class FacebookAuthFactory extends OAuthFactory {
   createAuthentication(): IOAuth {
     return new FacebookAuth();
   }
 }
 
-class LinkedInAuthFactory implements AuthFactory {
+class LinkedInAuthFactory extends OAuthFactory {
   createAuthentication(): IOAuth {
     return new LinkedInAuth();
   }
 }
+```
+
+**Note:** Since they already extend `OAuthFactory`, we don't need to define `authenticate` method in the concrete factory classes. So the following code:
+
+```ts
+class GoogleAuthFactory extends OAuthFactory {
+  createAuthentication(): IOAuth {
+    return new GoogleAuth();
+  }
+}
+```
+
+Is the same as:
+```ts
+class GoogleAuthFactory {
+  createAuthentication(): IOAuth {
+    return new GoogleAuth();
+  }
+
+  // Without supperclass, we would've needed this:
+  authenticate() {
+    const auth = this.createAuthentication();
+    auth.authenticate();
+  }
+}
+```
+
+But since `authenticate` method is the same for all, we use inheritance to avoid duplicating the code. We see that "Template" Pattern is also used in the Factory Method Pattern.
+
+Then we can use the factory class to create the authentication object:
+
+```ts
+const authProvider = new GoogleAuthFactory();
+authProvider.authenticate();
 ```
 
 ### Comparison
@@ -86,23 +131,8 @@ class LinkedInAuthFactory implements AuthFactory {
 | Number of files/classes           | ✅ A few          | 🚫 So many             |
 | Testing or mocking needed         | 🚫 Harder to mock | ✅ Easier to mock      |
 | Multiple steps/config in creation | 🚫 Hard to manage | ✅ More structured     |
-| Using DI (e.g., NestJS)           | 🚫 Not injectable | ✅ Fully DI-compatible |
 | Open/Closed principle             | 🚫 Violating      | ✅ Not Violating       |
 
-Let's see an example where concrete factory is preferred:
-
-When your object creation logic is not a simple `new ClassName()`, for example:
-
-```ts
-class CustomGoogleAuthFactory extends AuthFactory {
-  createAuth(): AuthStrategy {
-    const auth = new GoogleAuth();
-    // Add some custom setup logic
-    console.log("Custom logic before returning GoogleAuth");
-    return auth;
-  }
-}
-```
 
 ### Conclusion
 

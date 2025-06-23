@@ -1,4 +1,4 @@
-import { AuthenticationFactory } from './factory-method';
+import { AuthenticationFactory } from './factory-static';
 import { GoogleAuth, FacebookAuth, LinkedInAuth } from '../strategy-pattern/providers';
 
 describe('AuthenticationFactory', () => {
