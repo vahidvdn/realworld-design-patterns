@@ -38,3 +38,7 @@ storableEvent.publish({ name: 'Vahid Najafi' });
 ```
 
 See the code for more details like how we used interface and using both storable and loggable class at the same time.
+
+🔗 Related Patterns:
+
+- [Proxy Pattern](../proxy/README.md): Decorator Pattern add an extra behavior to the existing class e.g. we added saving ability to the original object (Event class) by introducing StorableEvent class. However, Proxy Pattern is used to have a limited access to the original object.
