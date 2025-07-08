@@ -43,9 +43,9 @@ Diagram: There is also a diagram to represent the oveview of the design pattern 
 
 ![design-pattern-diagram](assets/strategy-pattern.jpg)
 ------
-#### Command Pattern
+#### Decorator Pattern
 
-![design-pattern-diagram](assets/command-pattern.jpg)
+![design-pattern-diagram](assets/decorator.jpg)
 ------
 #### Chain of Responsibility Pattern
 
@@ -115,9 +115,10 @@ Contributing to a community project is always welcome.
 - [x] Command Pattern
 - [x] Composite Pattern
 - [x] Adapter Pattern
-- [x] Factory Method Pattern (Including Simple Factory)
+- [x] Factory Method Pattern (+ Simple Factory)
 - [x] Abstract Factory Pattern
-- [ ] Proxy Pattern
+- [x] Proxy Pattern
+- [ ] Facade Pattern
 - [ ] Memento Pattern
 
 ## Support
