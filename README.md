@@ -21,7 +21,13 @@ Elevate your software design skills with practical examples and insightful discu
 
 ## How to Learn? 📖
 
-You can open directory, for instance:
+### Prerequisites
+
+First, go over the [prerequisites](./PREREQUISITES.md) of design patterns—after that, it'll be much easier to move forward.
+
+### Patterns
+
+You can open each directory, for instance:
 
 ```
 $ cd app/strategy-pattern
