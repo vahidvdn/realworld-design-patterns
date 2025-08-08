@@ -45,9 +45,9 @@ Here is some steps in each `README` file:
 
 Diagram: There is also a diagram to represent the oveview of the design pattern to understand better. These are **some examples**:
 
-#### Strategy Pattern
+#### Observer Pattern
 
-![design-pattern-diagram](assets/strategy-pattern.jpg)
+![design-pattern-diagram](assets/observer.jpg)
 ------
 #### Decorator Pattern
 
@@ -57,6 +57,11 @@ Diagram: There is also a diagram to represent the oveview of the design pattern 
 
 ![design-pattern-diagram](assets/chain-of-res.jpg)
 ------
+#### Strategy Pattern
+
+![design-pattern-diagram](assets/strategy-pattern.jpg)
+------
+
 
 Open `/app` folder to see [all design patterns](https://github.com/vahidvdn/realworld-design-patterns/tree/master/app). ✅
 
@@ -121,11 +126,20 @@ Contributing to a community project is always welcome.
 - [x] Command Pattern
 - [x] Composite Pattern
 - [x] Adapter Pattern
-- [x] Factory Method Pattern (+ Simple Factory)
+- [x] Simple Factory Method
+- [x] Factory Method Pattern
 - [x] Abstract Factory Pattern
 - [x] Proxy Pattern
 - [ ] Facade Pattern
 - [ ] Memento Pattern
+- [ ] Singleton Pattern
+- [ ] Bridge Pattern
+- [ ] Prototype Pattern
+- [ ] State Pattern
+- [ ] Mediator Pattern
+- [ ] Iterator Pattern
+- [ ] Flyweight Pattern
+- [ ] Visitor Pattern
 
 ## Support
 
