@@ -1,32 +1,25 @@
-![template-method-pattern](../../assets/observer.jpg)
+![observer-pattern](../../assets/observer.jpg)
 
 ## 💡 Use Case
 
-Let's say we have an online shop. When admin want to introduce a new product, we need to notify multiple services or objects. Like database, cache and customers. Let's see how we can do this in practice:
+Suppose you are building a logging system for an application. You want to log messages to multiple destinations: the console, a file, and an external service like Elasticsearch. Instead of calling each logging mechanism separately, you can use the Observer pattern to decouple the logger from its outputs (transports).
 
 ## ❌ Bad Practice
 
-One way is to have seperate classes and call them one by one:
+A naive approach would be to call each transport directly every time you log a message:
 
 ```ts
-const product = {
-  id: 1,
-  title: 'New Product',
-  body: 'This is a new product for 2025.',
-};
-
-const db = new Db();
-const cache = new Cache();
-const customers = new Customers();
-
-db.update(product);
-cache.save(product);
-customers.sendPush(product);
+const message = 'Application started';
+console.log(message);
+writeToFile('application.log', message);
+sendToElastic('http://localhost:9200', message);
 ```
+
+This approach is hard to extend and maintain—adding or removing a transport requires changing the logging code everywhere.
 
 ## ✅ Good Practice
 
-Now we can implement Observer Pattern. Basically, each observer class (e.g. Cache) implements the same interface called `Observer`:
+With the Observer pattern, each transport implements the same `Observer` interface:
 
 ```ts
 export interface Observer {
@@ -34,7 +27,7 @@ export interface Observer {
 }
 ```
 
-So each class has a method called `notify`. We also have a `Subject` interface (also known as `Observable`):
+The `Subject` interface manages a list of observers (transports):
 
 ```ts
 export interface Subject {
@@ -44,29 +37,67 @@ export interface Subject {
 }
 ```
 
-The responsibility of `Subject` interface is to have a list of `Observer`s. We can push to this list with `attach` method. We can also remove an specific Observer from this list with `detach` method. Eventually we have `notify` method that notifies all the observers in a loop. Let's see the implementation:
+The `Logger` class implements the `Subject` interface and can notify all attached transports:
 
-```typescript
-export class NewProductPublisher implements Subject {
-  public observers: Observer[] = [];
+```ts
+export class Logger implements Subject {
+  public transports: Observer[] = [];
 
-  attach(observer: Observer): void {
-    const isExist = this.observers.includes(observer);
+  attach(transport: Observer): void {
+    const isExist = this.transports.includes(transport);
     if (!isExist) {
-      this.observers.push(observer);
+      this.transports.push(transport);
     }
   }
 
-  detach(observer: Observer): void {
-    const observerIndex = this.observers.indexOf(observer);
-    this.observers.splice(observerIndex, 1);
+  detach(transport: Observer): void {
+    const transportIndex = this.transports.indexOf(transport);
+    this.transports.splice(transportIndex, 1);
   }
 
-  notify(payload): void {
-    for (const observer of this.observers) {
-      observer.notify(payload);
+  notify(logData): void {
+    for (const transport of this.transports) {
+      transport.notify(logData);
     }
+  }
+
+  // Convenience methods for different log levels
+  info(message: string, meta?: any): void {
+    this.notify({ level: 'info', message, meta });
+  }
+
+  warn(message: string, meta?: any): void {
+    this.notify({ level: 'warn', message, meta });
+  }
+
+  error(message: string, meta?: any): void {
+    this.notify({ level: 'error', message, meta });
+  }
+
+  debug(message: string, meta?: any): void {
+    this.notify({ level: 'debug', message, meta });
   }
 }
 ```
+
+You can then create and attach different transports:
+
+```ts
+const logger = new Logger();
+
+const consoleTransport = new ConsoleTransport();
+const fileTransport = new FileTransport('application.log');
+const elasticTransport = new ElasticTransport('http://localhost:9200', 'app-logs');
+
+logger.attach(consoleTransport);
+logger.attach(fileTransport);
+logger.attach(elasticTransport);
+
+logger.info('Application started successfully');
+logger.warn('This is a warning message', { userId: 123, action: 'login' });
+logger.error('Database connection failed', { error: 'ECONNREFUSED', host: 'localhost:5432' });
+logger.debug('Processing user request', { requestId: 'req-456', endpoint: '/api/users' });
+```
+
+This way, you can add or remove logging destinations without changing the logger's core logic, making your codebase more maintainable and extensible.
 
