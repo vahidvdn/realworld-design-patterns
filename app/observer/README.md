@@ -1,3 +1,4 @@
+# 📚 Observer Pattern
 ![observer-pattern](../../assets/observer.jpg)
 
 ## 💡 Use Case

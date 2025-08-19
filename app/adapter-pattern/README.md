@@ -1,3 +1,5 @@
+
+# 📚 Adapter Pattern
 ![adapter-design-pattern](../../assets/adapter-pattern.jpg)
 
 ## 💡 Use Case

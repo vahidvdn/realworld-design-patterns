@@ -1,3 +1,4 @@
+# 📚 Factory Method Pattern
 ![factory-method](../../assets/factory-method.jpg)
 
 ## 💡 Use Case 1 - Static Factory

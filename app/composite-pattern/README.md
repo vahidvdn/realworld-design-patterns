@@ -1,3 +1,4 @@
+# 📚 Composite Pattern
 ![composite-design-pattern](../../assets/composite-pattern.jpg)
 
 ## 💡 Use Case
