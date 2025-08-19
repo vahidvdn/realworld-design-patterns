@@ -85,3 +85,9 @@ const request = builder
   .setBody({ title: 'this is title', body: 'this is body' })
   .build();
 ```
+
+## Another Practical Example
+
+If you ever worked with NestJS, you could realize that it has a similar way of building requests. But in `@nestjs/swagger`. It's called `DocumentBuilder`. Here is an example:
+
+![document-builder](../../assets/nestjs-builder.png)
