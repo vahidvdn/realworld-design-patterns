@@ -1,3 +1,4 @@
+# 📚 Strategy Pattern
 ![strategy-design-pattern](../../assets/strategy-pattern.jpg)
 
 ## 💡 Use Case

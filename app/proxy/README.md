@@ -1,3 +1,4 @@
+# 📚 Proxy Pattern
 ![proxy-design-pattern](../../assets/proxy-pattern.jpg)
 
 ## 💡 Use Case

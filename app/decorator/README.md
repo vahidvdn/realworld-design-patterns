@@ -1,3 +1,4 @@
+# 📚 Decorator Pattern
 ![decorator-design-pattern](../../assets/decorator.jpg)
 
 ## 💡 Use Case

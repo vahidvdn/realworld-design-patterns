@@ -1,3 +1,4 @@
+# 📚 Chain of Responsibility Pattern
 ![chain-of-responsibility-cover](../../assets/chain-of-res.jpg)
 
 ## 💡 Use Case
