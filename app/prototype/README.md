@@ -1,5 +1,7 @@
 # 📚 Prototype Pattern
 
+![prototype-pattern](../../assets/prototype-pattern.jpg)
+
 ## 💡 Use Case
 
 Let's say you need to create multiple documents with similar properties (like templates for invoices, reports, etc.) without recreating the entire document structure each time.
