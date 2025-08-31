@@ -131,10 +131,10 @@ Contributing to a community project is always welcome.
 - [x] Abstract Factory Pattern
 - [x] Proxy Pattern
 - [x] Bridge Pattern
+- [x] Prototype Pattern
 - [ ] Facade Pattern
 - [ ] Memento Pattern
 - [ ] Singleton Pattern
-- [ ] Prototype Pattern
 - [ ] State Pattern
 - [ ] Mediator Pattern
 - [ ] Iterator Pattern
