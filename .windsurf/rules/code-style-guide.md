@@ -16,3 +16,6 @@ Always check one of the patterns to keep consistency.
 
 Implement the pattern based on the prompt.
 
+Add readme similar to other readme files of patterns in the project.
+
+Add unit tests as well.
