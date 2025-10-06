@@ -116,6 +116,13 @@ Contributing to a community project is always welcome.
 
 ## Checklist
 
+- [x] Prerequisites
+  - [x] 4 Pillars of OOP
+  - [x] SOLID Principles
+  - [x] KISS
+  - [x] DRY
+  - [x] YAGNI
+  - [x] Cross-Cutting-Concerns
 - [x] Strategy Pattern
 - [x] Dependency Injection Pattern
 - [x] Chain of Responsibility Pattern
