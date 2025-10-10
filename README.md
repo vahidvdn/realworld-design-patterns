@@ -112,7 +112,10 @@ $ npm run test:cov:open
 
 ## Contributing
 
-Contributing to a community project is always welcome.
+Contributing to a community project is always welcome. List of contributors:
+
+| <img src="https://github.com/vahidvdn.png" width="100"> <br> [**Vahid Najafi**](https://github.com/vahidvdn) | <img src="https://github.com/ElshadHu.png" width="100"> <br> [**Elshad**](https://github.com/ElshadHu) |
+| :---: | :---: |
 
 ## Checklist
 
