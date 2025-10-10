@@ -1,5 +1,5 @@
 {
-"scripts": {
+  "scripts": {
     "start": "ts-node memento-pattern",
     "start:bad": "ts-node bad-practice"
   },
