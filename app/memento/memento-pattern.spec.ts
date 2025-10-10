@@ -14,14 +14,14 @@ describe('Memento Pattern', () => {
     jest.clearAllMocks();
   });
 
-    it('should throw error when health is out of range', () => {
-      expect(() => {
-        new PlayerState(-10, 1, false, 'Hero');
-      }).toThrow('Health must be between 0 and 100');
+  it('should throw error when health is out of range', () => {
+    expect(() => {
+      new PlayerState(-10, 1, false, 'Hero');
+    }).toThrow('Health must be between 0 and 100');
 
-      expect(() => {
-        new PlayerState(150, 1, false, 'Hero');
-      }).toThrow('Health must be between 0 and 100');
+    expect(() => {
+      new PlayerState(150, 1, false, 'Hero');
+    }).toThrow('Health must be between 0 and 100');
   });
   it('should save player state', () => {
     const memento = player.save();
@@ -33,7 +33,7 @@ describe('Memento Pattern', () => {
       isDead: false
     });
   });
-  
+
   it('should restore player state', () => {
     player.levelUp();
     const memento = player.save();
@@ -55,7 +55,7 @@ describe('Memento Pattern', () => {
   it('should throw an error when slot not found', () => {
     expect(() => {
       saveManager.loadFromSlot('notExisted');
-    }).toThrow('Save slot not found');  
+    }).toThrow('Save slot not found');
   });
 
   it('should restore player to alive state from dead state', () => {
@@ -75,7 +75,7 @@ describe('Memento Pattern', () => {
   it('should handle multiple save slots', () => {
     player.levelUp();
     saveManager.saveToSlot('slotFirst', player.save());
-    
+
     player.levelUp();
     saveManager.saveToSlot('slotSecond', player.save());
 

@@ -1,5 +1,5 @@
-import { PlayerMemento } from './game-memento'; 
-import { Player, IMemento } from './interface'; 
+import { PlayerMemento } from './game-memento';
+import { Player, IMemento } from './interface';
 
 export class PlayerState {
   private health: number;
@@ -37,7 +37,7 @@ export class PlayerState {
     return new PlayerMemento(state);
   }
 
-  public restore(memento: IMemento): void { 
+  public restore(memento: IMemento): void {
     const state = memento.getState();
     this.name = state.name;
     this.health = state.health;
@@ -53,5 +53,4 @@ export class PlayerState {
   public levelUp(): void {
     this.level++;
   }
-
 }
