@@ -139,8 +139,8 @@ Contributing to a community project is always welcome.
 - [x] Proxy Pattern
 - [x] Bridge Pattern
 - [x] Prototype Pattern
+- [x] Memento Pattern
 - [ ] Facade Pattern
-- [ ] Memento Pattern
 - [ ] Singleton Pattern
 - [ ] State Pattern
 - [ ] Mediator Pattern
