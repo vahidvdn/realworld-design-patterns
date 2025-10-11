@@ -34,9 +34,13 @@
       "^.+\\.(ts|tsx)$": "ts-jest"
     },
     "collectCoverage": true,
-    "coverageReporters": ["json", "html"]
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
   },
   "dependencies": {
-    "axios": "^1.7.3"
+    "axios": "^1.7.3",
+    "react": "^19.2.0"
   }
 }
