@@ -114,8 +114,8 @@ $ npm run test:cov:open
 
 Contributing to a community project is always welcome. List of contributors:
 
-| <img src="https://github.com/vahidvdn.png" width="100"> <br> [**Vahid Najafi**](https://github.com/vahidvdn) | <img src="https://github.com/ElshadHu.png" width="100"> <br> [**Elshad**](https://github.com/ElshadHu) |
-| :---: | :---: |
+| <img src="https://github.com/vahidvdn.png" style="border-radius: 100%" width="80"> <br> [Vahid Najafi](https://github.com/vahidvdn) | <img src="https://github.com/ElshadHu.png" style="border-radius: 100%" width="80"> <br> [Elshad Humbatli](https://github.com/ElshadHu) | <img src="https://github.com/Sabeerwaqas.png" style="border-radius: 100%" width="80"> <br> [Sabeer Waqas](https://github.com/Sabeerwaqas)
+| :---: | :---: | :---: |
 
 ## Checklist
 
