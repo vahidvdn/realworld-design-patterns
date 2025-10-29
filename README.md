@@ -92,22 +92,11 @@ $ npm run -w PATTERN_NAME start:bad
 
 In order to run tests, run the following command. (add `:watch` to run it in watch mode):
 
-```
+```sh
 $ npm run test
-```
+$ npm run test:cov # test coverage
+$ npm run test:cov:open # open test coverage reports
 
-## Test Coverage
-
-Run the following command to evaluate test coverage:
-
-```
-$ npm run test:cov
-```
-
-To see the coverage report, just run:
-
-```
-$ npm run test:cov:open
 ```
 
 ## Contributing
