@@ -1,10 +1,15 @@
 {
   "scripts": {
     "start": "ts-node facade-pattern",
-    "start:bad": "ts-node bad-practice"
+    "start:bad": "ts-node bad-practice",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/sharp": "^0.32.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "sharp": "^0.32.0"
   }
 }
