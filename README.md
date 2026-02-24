@@ -47,21 +47,19 @@ Diagram: There is also a diagram to represent the oveview of the design pattern 
 
 #### Observer Pattern
 
-![design-pattern-diagram](assets/observer.jpg)
-------
+## ![design-pattern-diagram](assets/observer.jpg)
+
 #### Decorator Pattern
 
-![design-pattern-diagram](assets/decorator.jpg)
-------
+## ![design-pattern-diagram](assets/decorator.jpg)
+
 #### Chain of Responsibility Pattern
 
-![design-pattern-diagram](assets/chain-of-res.jpg)
-------
+## ![design-pattern-diagram](assets/chain-of-res.jpg)
+
 #### Strategy Pattern
 
-![design-pattern-diagram](assets/strategy-pattern.jpg)
-------
-
+## ![design-pattern-diagram](assets/strategy-pattern.jpg)
 
 Open `/app` folder to see [all design patterns](https://github.com/vahidvdn/realworld-design-patterns/tree/master/app). ✅
 
@@ -80,7 +78,6 @@ $ npm run -w PATTERN_NAME start
 ```
 
 For instance **PATTERN_NAME** can be strategy-pattern
-
 
 To run the bad practice:
 
@@ -103,8 +100,8 @@ $ npm run test:cov:open # open test coverage reports
 
 Contributing to a community project is always welcome. List of contributors:
 
-| <img src="https://github.com/vahidvdn.png" style="border-radius: 100%" width="80"> <br> [Vahid Najafi](https://github.com/vahidvdn) | <img src="https://github.com/ElshadHu.png" style="border-radius: 100%" width="80"> <br> [Elshad Humbatli](https://github.com/ElshadHu) | <img src="https://github.com/Sabeerwaqas.png" style="border-radius: 100%" width="80"> <br> [Sabeer Waqas](https://github.com/Sabeerwaqas)
-| :---: | :---: | :---: |
+| <img src="https://github.com/vahidvdn.png" style="border-radius: 100%" width="80"> <br> [Vahid Najafi](https://github.com/vahidvdn) | <img src="https://github.com/ElshadHu.png" style="border-radius: 100%" width="80"> <br> [Elshad Humbatli](https://github.com/ElshadHu) | <img src="https://github.com/Sabeerwaqas.png" style="border-radius: 100%" width="80"> <br> [Sabeer Waqas](https://github.com/Sabeerwaqas) |
+| :---------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------: |
 
 ## Checklist
 
@@ -132,7 +129,7 @@ Contributing to a community project is always welcome. List of contributors:
 - [x] Bridge Pattern
 - [x] Prototype Pattern
 - [x] Memento Pattern
-- [ ] Facade Pattern
+- [x] Facade Pattern
 - [ ] Singleton Pattern
 - [ ] State Pattern
 - [ ] Mediator Pattern
@@ -143,7 +140,6 @@ Contributing to a community project is always welcome. List of contributors:
 ## Support
 
 Any support is welcome. You can give the project a star, if you liked it ⭐
-
 
 ## License
 
