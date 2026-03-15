@@ -141,6 +141,10 @@ Contributing to a community project is always welcome. List of contributors:
 
 Any support is welcome. You can give the project a star, if you liked it ⭐
 
+## Related Projects
+
+- [Real World Scalable Architecture](https://github.com/vahidvdn/realworld-scalable-architecture)
+
 ## License
 
 MIT
