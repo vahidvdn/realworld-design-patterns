@@ -1,4 +1,9 @@
-import { Logger, PaymentService, UserService } from "./singleton-pattern";
+import {
+  Logger,
+  main,
+  PaymentService,
+  UserService,
+} from "./singleton-pattern";
 
 describe("Singleton Pattern", () => {
   beforeEach(() => {
@@ -28,8 +33,13 @@ describe("Singleton Pattern", () => {
     expect(initCalls).toHaveLength(1);
   });
 
+  it("should default to the info level", () => {
+    expect(Logger.getInstance().getLevel()).toBe("info");
+  });
+
   it("should share configuration across all services", () => {
     Logger.getInstance().setLevel("debug");
+    expect(Logger.getInstance().getLevel()).toBe("debug");
 
     new PaymentService().charge(49);
 
@@ -58,5 +68,12 @@ describe("Singleton Pattern", () => {
 
     expect(logger.getEntries()).toHaveLength(1);
     expect(logger.getEntries()[0].message).toBe("kept");
+  });
+
+  it("should run the example with one shared logger", () => {
+    main();
+
+    expect(console.log).toHaveBeenCalledWith("Same instance everywhere:", true);
+    expect(console.log).toHaveBeenCalledWith("Total entries:", 3);
   });
 });

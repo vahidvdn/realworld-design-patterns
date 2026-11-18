@@ -56,7 +56,7 @@ export class BadPaymentService {
   }
 }
 
-if (require.main === module) {
+export function main() {
   // Configure the "application" logger... Instance C
   const appLogger = new BadLogger();
   appLogger.setLevel("debug");
@@ -73,4 +73,9 @@ if (require.main === module) {
     "Payment logger entries:",
     paymentService.logger.getEntries().length,
   ); // 1
+}
+
+/* istanbul ignore next */
+if (require.main === module) {
+  main();
 }

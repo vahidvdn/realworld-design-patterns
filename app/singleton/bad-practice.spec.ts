@@ -1,4 +1,9 @@
-import { BadLogger, BadPaymentService, BadUserService } from "./bad-practice";
+import {
+  BadLogger,
+  BadPaymentService,
+  BadUserService,
+  main,
+} from "./bad-practice";
 
 describe("Singleton Pattern bad practice", () => {
   beforeEach(() => {
@@ -34,5 +39,26 @@ describe("Singleton Pattern bad practice", () => {
 
     expect(userService.logger.getEntries()).toHaveLength(1);
     expect(paymentService.logger.getEntries()).toHaveLength(1);
+  });
+
+  it("should log debug messages when the level allows it", () => {
+    const logger = new BadLogger();
+    logger.setLevel("debug");
+
+    logger.log("debug", "Test", "kept");
+
+    expect(logger.getEntries()).toHaveLength(1);
+  });
+
+  it("should run the example with scattered, inconsistent loggers", () => {
+    main();
+
+    const initCalls = (console.log as jest.Mock).mock.calls.filter(([msg]) =>
+      String(msg).startsWith("Logger initialized"),
+    );
+    expect(initCalls).toHaveLength(3);
+    expect(console.log).toHaveBeenCalledWith("App logger entries:", 0);
+    expect(console.log).toHaveBeenCalledWith("User logger entries:", 1);
+    expect(console.log).toHaveBeenCalledWith("Payment logger entries:", 1);
   });
 });
