@@ -81,7 +81,7 @@ export class PaymentService {
 }
 
 // Example usage
-if (require.main === module) {
+export function main() {
   // Configure once, at application bootstrap
   Logger.getInstance().setLevel("debug");
 
@@ -93,4 +93,9 @@ if (require.main === module) {
     Logger.getInstance() === Logger.getInstance(),
   );
   console.log("Total entries:", Logger.getInstance().getEntries().length);
+}
+
+/* istanbul ignore next */
+if (require.main === module) {
+  main();
 }
