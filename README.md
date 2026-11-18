@@ -130,7 +130,7 @@ Contributing to a community project is always welcome. List of contributors:
 - [x] Prototype Pattern
 - [x] Memento Pattern
 - [x] Facade Pattern
-- [ ] Singleton Pattern
+- [x] Singleton Pattern
 - [ ] State Pattern
 - [ ] Mediator Pattern
 - [ ] Iterator Pattern
